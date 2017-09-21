@@ -1,0 +1,1054 @@
+/* ------------------------------------ */
+/* -------------- GLOBAL -------------- */
+/* ------------------------------------ */
+
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+h1, h2, h3, h4
+	font-family: "PTSerifBold", sans-serif
+	line-height: 24px
+	margin-bottom: 30px
+h1
+	font-size: 24px
+h2
+	font-size: 22px
+h3
+	font-size: 20px
+h4
+	font-size: 18px
+
+b
+	font-family: "PTSerifBold", sans-serif
+
+p
+	margin: 0 0 25px
+	line-height: 24px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+.mb20
+	margin-bottom: 20px
+.mb30
+	margin-bottom: 30px
+.mb50
+	margin-bottom: 50px
+// ul,
+// ol
+// 	margin-bottom: 25px
+// 	li
+// 		margin: 0 0 0.5em 0
+// 		font-size: 1em
+// 		line-height: 1.2em
+// 		color: #ffc533
+// 		span
+// 			color: #000
+// ul
+// 	li
+// 		list-style-type: disc
+
+ul, ol
+	margin-bottom: 25px
+	padding-left: 50px
+	list-style-type: none
+	li
+		position: relative
+		margin: 0 0 0.5em 0
+		font-size: 1em
+		line-height: 1.2em
+		&::before
+			position: absolute
+			content: ''
+		span
+			color: #000
+ul
+	li
+		&::before
+			width: 6px
+			height: 6px
+			top: 7px
+			left: -18px
+			border-radius: 50%
+			background-color: #ffc533
+ol
+	counter-reset: list
+	li
+		&::before
+			counter-increment: list
+			content: counter(list)'.'
+			width: 25px
+			height: 25px
+			top: -3px
+			left: -26px
+			color: #ffc533
+			text-align: center
+			line-height: 25px
+
+.divider
+	height: 1px
+	background-color: #ebebeb
+
+/* ------------------------------------ */
+/* -------------- BUTTONS ------------- */
+/* ------------------------------------ */
+.btn-wr
+	padding: 40px 0
+.btn-center
+	text-align: center
+
+.btn-main
+	display: block
+	margin: 0 auto
+	padding: 0
+	font-family: "PTSerifBold", sans-serif
+	color: #000
+	font-size: 19px
+	line-height: 45px
+	text-align: center
+	text-decoration: none
+	border: 3px solid #f2f2f2
+	transition: all .1s
+	&:hover,
+	&:focus,
+	&:active
+		background-color: #ffc533
+		border-color: #ffc533
+		text-decoration: none
+		color: #fff
+		transition: all .1s
+
+.btn-small
+	font-size: 16px
+	line-height: 34px
+	padding: 0 16px
+	display: inline-block
+.btn-medium
+	width: 190px
+
+.btn-fullwidth
+	width: 100%
+
+.btn-orange
+	border: 3px solid #ffc533
+
+.btn-top
+	display: inline-block
+	width: 45px
+	height: 45px
+	transition: opacity .35s ease
+	opacity: .2
+	&:hover
+		transition: opacity .35s ease
+		opacity: .5
+
+.btn-submit
+	display: inline-block
+	margin-left: -4px
+	background-color: transparent
+	outline: none
+
+.shedule-block
+	margin-bottom: 50px
+.shedule-btn
+	display: block
+	height: 126px
+	color: #000
+	background: url(../img/icons/spiol_open.png) 50px center no-repeat
+	font-family: "PTSerifBold", sans-serif
+	font-size: 18px
+	line-height: 126px
+	text-align: center
+	border: 3px solid #f2f2f2
+	cursor: pointer
+	&:hover,
+	&:active,
+	&:focus
+		color: #000
+		text-decoration: none
+.shedule-btn.open
+	background: url(../img/icons/spiol_hover.png) 50px center no-repeat
+.shedule-list
+	display: none
+	padding: 70px
+	background-color: #f2f2f2
+
+/* ------------------------------------ */
+/* -------------- HEADER -------------- */
+/* ------------------------------------ */
+
+/* --------------- LOGO --------------- */
+.logo-wr
+	padding: 40px 0 0
+	width: 340px
+	margin: 0 auto
+
+/* ---------- CONTACTS BLOCK ---------- */
+.contact
+	float: right
+	padding: 80px 0 0
+.contact,
+.contact a
+	color: #999
+	font-family: "PTSerifRegular", sans-serif
+	font-size: 14px
+	font-weight: 400
+	line-height: 22px
+	text-decoration: none
+.contact-item
+	&:hover
+		color: #000
+		font-size: 16px
+		line-height: 22px
+		a
+			color: #000
+			font-size: 16px
+			line-height: 22px
+			text-decoration: none
+		.contact-ir
+			&::before
+				opacity: 1
+
+.contact-il,
+.contact-ir
+	display: inline-block
+	position: relative
+.contact-il
+	width: 200px
+.contact-ir
+	width: 140px
+	&::before
+		position: absolute
+		content: ''
+		height: 13px
+		width: 1px
+		background-color: #000
+		top: 5px
+		left: -15px
+		opacity: 0
+
+/* ---- MAIN MENU, SECONDARY MENU ---- */
+.nav-main,
+.nav-secondary
+	margin: 0 0 25px
+	li
+		height: auto
+		display: block
+		margin-bottom: 0
+		font-size: 13px
+		line-height: 16px
+		&::before
+			display: none
+		a
+			text-align: left
+			display: block
+	.nav
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		&::before,
+		&::after
+			display: none
+		li
+			a,
+			a:focus,
+			a:hover
+				padding: 10px 15px 10px 30px
+			a:focus,
+			a:hover
+				background-color: #fff
+				border-color: #f2f2f2
+		.open
+			a
+				color: #000
+				background-color: transparent
+				border-color: transparent
+			a:focus,
+			a:hover
+				color: #000
+				background-color: #fff
+				border-color: transparent
+			.dropdown-toggle
+				background: #fff url(../img/icons/arrow-down-h.png) no-repeat 5px 10px
+	.dropdown-toggle
+		font-size: 16px
+
+.nav-main
+	li
+		a
+			color: #000
+			font-family: "PTSerifBold", sans-serif
+	.dropdown-toggle
+		background: #fff url(../img/icons/arrow-down-black.png) no-repeat 5px 10px
+	.dropdown-menu,
+	.nav
+		li
+			a:focus,
+			a:hover
+				color: #000
+
+.nav-secondary
+	li
+		a
+			color: #999
+			font-family: "PTSerifRegular", sans-serif
+			border-radius: 0
+	.dropdown
+		width: 100%
+		margin: 0 10px
+	.dropdown:first-child
+		margin-left: 0
+	.dropdown:last-child
+		margin-right: 0
+	.dropdown-toggle
+		background: #fff url(../img/icons/arrow-down-grey.png) no-repeat 5px 10px
+		border-top: 2px solid #f2f2f2
+	.dropdown-menu,
+	.nav
+		li
+			a:focus,
+			a:hover,
+			a:active
+				color: #999
+.dropdown-menu
+	position: absolute
+	top: 100%
+	left: 0
+	z-index: 1000
+	display: none
+	float: left
+	width: 100%
+	min-width: 160px
+	padding: 0
+	margin: 0
+	font-size: 14px
+	text-align: left
+	list-style: none
+	background-color: #f2f2f2
+	-webkit-background-clip: padding-box
+	background-clip: padding-box
+	border: none
+	border-radius: 0
+	-webkit-box-shadow: none
+	box-shadow: none
+	li
+		a
+			padding: 10px 15px 10px 30px
+			&:hover,
+			&:focus
+				background-color: #fff
+
+/* ------------------------------------ */
+/* ------------- CONTENT -------------- */
+/* ------------------------------------ */
+.content-block
+	padding: 0 0 40px
+.block-title
+	position: relative
+	font-size: 26px
+	line-height: 29px
+	text-align: center
+	&::before
+		position: absolute
+		content: ''
+		width: 100%
+		height: 3px
+		top: 50%
+		left: 0
+		transorm: translateY(-50%)
+		background-color: #000
+		z-index: -1
+	span
+		background-color: #fff
+		padding: 0 20px
+.block-title-small
+	font-family: "PTSerifBold", sans-serif
+	font-size: 19px
+	line-height: 19px
+.h1
+	color: #010101
+	font-size: 35px
+	line-height: 24px
+.cnt-text
+	padding: 0 0 50px
+
+.txt-center
+	text-align: center
+.txt-two-col
+	width: 100%
+	column-count: 2
+	-moz-column-count: 2
+	-webkit-column-count: 2
+	column-gap: 40px
+	-moz-column-gap: 40px
+	-webkit-column-gap: 40px
+	line-height: 24px
+
+.cnt-thumb
+	margin: 0 0 30px
+
+.bg-grey
+	background: #f2f2f2
+
+.icon-text
+	font-family: "PTSerifBold", sans-serif
+	text-align: center
+	margin-bottom: 30px
+	span
+		padding-top: 6px
+		padding-bottom: 6px
+		padding-left: 44px
+		line-height: 32px
+.icon-medal span
+	background: url(../img/icons/medal.png) left center no-repeat
+
+.icon-block
+	position: relative
+	height: 60px
+	&::before,
+	&::after
+		position: absolute
+		content: ''
+	&::before
+		width: 100%
+		height: 3px
+		background-color: #f2f2f2
+		top: 50%
+		transform: translateY(-50%)
+	&::after
+		width: 140px
+		height: 55px
+		left: 50%
+		transform: translateX(-50%)
+.icon-flower::after
+		background: #fff url(../img/icons/icon-flower.png) center no-repeat
+.icon-time::after
+		background: #fff url(../img/icons/icon-time.png) center no-repeat
+.icon-gis::after
+		background: #fff url(../img/icons/icon-gis.png) center no-repeat
+.icon-diamond::after
+		background: #fff url(../img/icons/icon-diamond.png) center no-repeat
+.icon-descr
+	position: relative
+	font-size: 21px
+	margin-bottom: 20px
+	text-align: center
+	display: block
+	padding: 20px 0px
+.icon-descr + .icon-descr
+	padding-top: 0
+
+/* ------- LICENSE DESCRIPTION -------- */
+.license-descr-logo
+	text-align: center
+	img
+		width: 120px
+.license-descr-txt-main,
+.license-descr-txt
+	color: #1a1a1a
+	font-size: 16px
+	line-height: 1.5
+.license-descr-txt-main
+	position: relative
+	padding: 15px 0 0 50px
+	font-family: "PTSerifBold", sans-serif
+	&::before
+		position: absolute
+		content: ''
+		height: 93px
+		width: 2px
+		top: 2px
+		left: 5px
+		background-color: #f2f2f2
+.license-descr-txt
+	padding: 15px 0 0
+
+/* ------------- SLIDER --------------- */
+.slide
+	position: relative
+.slide-descr
+	position: absolute
+	bottom: 0
+	width: 100%
+	height: 132px
+	background-color: rgba(0,0,0,.5)
+	color: #fff
+	font-family: "PTSerifBold", sans-serif
+	line-height: 37px
+	text-align: center
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+.slide-title
+	font-size: 36px
+.slide-date
+	font-size: 19px
+
+/* ------------- EVENTS --------------- */
+.event-item
+	border-top: 3px solid #f2f2f2
+	padding: 40px 0
+.events .event-item:first-child
+	border-top: none
+.event-thumb
+	max-width: 252px
+	img
+		width: 100%
+.event-title
+	font-family: "PTSerifBold", sans-serif
+	font-size: 18px
+	line-height: 22px
+	margin-bottom: 15px
+	a
+		color: #000
+		&:hover
+			text-decoration: underline
+.event-descr
+	line-height: 24px
+
+/* ------------ PROGRAMMS ------------- */
+.programm-thumb
+	margin-bottom: 30px
+	img
+		width: 100%
+.programm-title,
+.programm-date,
+.programm-descr
+	line-height: 22px
+.programm-title
+	margin-bottom: 20px
+	font-family: "PTSerifBold", sans-serif
+	font-size: 18px
+.programm-date
+	margin-bottom: 20px
+	font-family: "PTSerifBold", sans-serif
+
+/* -------------- NEWS ---------------- */
+.news-item
+	border-top: 3px solid #f2f2f2
+	padding: 40px 0
+.news .news-item:nth-child(2)
+	border-top: none
+.news-thumb
+	max-width: 252px
+	img
+		width: 100%
+.news-title
+	font-family: "PTSerifBold", sans-serif
+	font-size: 18px
+	line-height: 22px
+	margin-bottom: 15px
+	a
+		color: #000
+		&:hover
+			text-decoration: underline
+.news-descr
+	line-height: 24px
+
+/* ---------- SUBSCRIBE FORM ---------- */
+.email
+	padding: 8px 16px
+	width: 390px
+	font-family: "PTSerifBold", sans-serif
+	color: #000
+	font-size: 19px
+	line-height: 29px
+	text-align: center
+	text-decoration: none
+	border: 3px solid #f2f2f2
+	border-right: none
+	outline: none
+	&:hover,
+	&:focus,
+	&:active
+		border-color: #f2f2f2
+
+/* ------------- ARTICLES ------------- */
+.article-item
+	margin-bottom: 30px
+	border-bottom: 3px solid #f2f2f2
+	> .row
+		display: flex
+	.btn-wr
+		padding: 0 0 25px
+		display: flex
+		align-items: flex-end
+		height: 100%
+.article-descr
+	line-height: 24px
+	padding-bottom: 20px
+/* ----------- SOCIAL BLOCK ----------- */
+.social-block
+	margin: 30px 0 0
+.social-title
+	padding: 6px 0 13px
+	text-align: center
+	font-family: "PTSerifBold", sans-serif
+	font-size: 19px
+	line-height: 29px
+	border: 3px solid #f2f2f2
+.social-wr
+	padding: 40px 0 30px
+	margin-bottom: 20px
+	background-color: #b6d1ed
+	border: 3px solid #f2f2f2
+	border-top: none
+
+/* --------------- INFO --------------- */
+
+/* -------------- WIDGET -------------- */
+.widget
+	margin-bottom: 20px
+
+/* ------------------------------------ */
+/* -------------- FOOTER -------------- */
+/* ------------------------------------ */
+.footer
+	margin-top: 30px
+	padding: 20px 0 80px
+	background-color: #1a1a1a
+	border-top: 5px solid #bfbfbf
+.footer-social
+	float: left
+	margin: 20px 20px 0 0
+	padding-left: 10px
+	border-left: 1px solid #797979
+.footer-soc-btn
+	display: block
+	width: 48px
+	height: 49px
+	float: left
+	margin-right: 4px
+	transition: background .35s
+	&:hover
+		transition: background .35s
+.fb
+	background: url(../img/icons/btn-fb.png)
+	&:hover
+		background: url(../img/icons/btn-fb-h.png)
+.vk
+	background: url(../img/icons/btn-vk.png)
+	&:hover
+		background: url(../img/icons/btn-vk-h.png)
+.inst
+	background: url(../img/icons/btn-inst.png)
+	&:hover
+		background: url(../img/icons/btn-inst-h.png)
+.footer-text
+	padding: 10px 0 0
+	color: #4d4d4d
+	font-size: 13px
+	line-height: 19px
+
+/* ----------- FOOTER MENU ------------ */
+.footer
+	width: 100%
+	.nav-main
+		margin: 0 0 25px
+		li
+			height: auto
+			display: block
+			a
+				display: block
+				color: #fff
+				font-family: "PTSerifBold", sans-serif
+				text-align: left
+		.nav
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			&::before,
+			&::after
+				display: none
+			> li
+				> a,
+				> a:focus,
+				> a:hover
+					padding: 10px 15px 10px 30px
+					background-color: transparent
+					color: #fff
+			.open
+				> a,
+				> a:focus,
+				> a:hover
+						background-color: transparent
+		.dropdown-toggle
+			background: #fff url(../img/icons/arrow-down-white.png) no-repeat 5px 10px
+			font-size: 13px
+		.dropdown-menu
+			bottom: 100%
+			top: auto
+			li
+				a,
+				a:focus,
+				a:hover
+					color: #000
+
+/* ------------------------------------ */
+/* -------------- COURSES ------------- */
+/* ------------------------------------ */
+.courses-teacher
+	margin: 0 0 30px
+.courses-block
+	padding: 30px 55px 35px
+	h2
+		font-family: "PTSerifBold", sans-serif
+		font-size: 24px
+		line-height: 24px
+		margin: 0 0 40px
+	p
+		margin: 0 0 30px
+	p:last-child
+		margin-bottom: 0
+	img
+		margin: 0 0 20px
+		width: 100%
+.courses-title
+	font-family: "PTSerifBold", sans-serif
+	font-size: 24px
+	line-height: 24px
+	margin: 0 0 20px
+	text-align: center
+.courses-columns
+	display: flex
+.courses-col
+	float: left
+	width: 50%
+	padding: 50px 55px 45px
+	position: relative
+	&::before
+		position: absolute
+		content: ''
+		width: calc(100% + 6px)
+		height: 11px
+		top: 0
+		left: -3px
+.courses-col-left
+	border: 3px solid #f2f2f2
+	border-top: 0
+	border-right: 0
+	&::before
+		background: #335f9d
+.courses-col-right
+	border: 3px solid #f2f2f2
+	border-top: 0
+	&::before
+		background: #ffc533
+.courses-col-title,
+.courses-col-duration
+	font-size: 24px
+	font-family: "PTSerifBold", sans-serif
+	line-height: 34px
+.courses-col-duration
+	margin-bottom: 30px
+.courses-col-text
+	line-height: 24px
+.courses-img
+	img
+		width: 100%
+.courses-col-btn
+	margin-bottom: 15px
+.courses-video-item
+	margin: 0 0 20px
+.courses-btns
+	border: 3px solid #f2f2f2
+	line-height: 60px
+	display: flex
+	justify-content: space-between
+	margin: 0 0 30px
+	a
+		width: 100%
+		color: #000
+		font-family: "PTSerifBold", sans-serif
+		text-align: center
+		&:hover,
+		&:active,
+		&:focus
+			color: #fff
+			background-color: #335f9d
+			text-decoration: none
+.courses-image-block
+	margin: 0 0 30px
+	img
+		margin-bottom: 20px
+		max-width: 100%
+.courses-title-block
+	span:first-child
+		float: left
+		color: #ffc533
+		font-size: 50px
+		padding-right: 30px
+		border-right: 3px solid
+		margin-right: 30px
+		margin-top: 30px
+		line-height: normal !important
+	h1
+		margin: 0px
+		margin-top: 27px
+		font-size: 34px
+		line-height: normal !important
+		font: normal bold 2em/1.1 Arial, Helvetica, sans-serif;
+	span:last-child
+		font-size: 30px
+		line-height: normal !important
+
+.social-block-top
+	height: 40px
+	margin-bottom: 15px
+	padding: 7px 0 0
+	text-align: right
+
+/* ------------------------------------ */
+/* ------------ ADVANTAGES ------------ */
+/* ------------------------------------ */
+.image-gallery
+	margin: 0 0 30px
+.image-gallery-item
+	margin-bottom: 40px
+	padding: 0 0 20px
+	border-bottom: 3px solid #f2f2f2
+	img
+		margin-bottom: 20px
+		max-width: 100%
+.image-gallery-title
+	font-family: "PTSerifBold", sans-serif
+	font-size: 19px
+	line-height: 29px
+	margin-bottom: 15px
+	a
+		color: #333
+.image-gallery-descr
+	line-height: 24px
+
+/* ------------------------------------ */
+/* ------------ ADVANTAGES ------------ */
+/* ------------------------------------ */
+.advantages-block
+	position: relative
+	border: 2px solid #ffc533
+	font-size: 16px
+	padding: 20px 20px 5px 55px
+	margin: 50px 0 45px
+	ul
+		margin-top: 20px
+		margin-bottom: 55px
+.advantages-block-title
+	position: relative
+	display: inline-block
+	font-family: "PTSerifBold", sans-serif
+	background: #fff
+	font-size: 30px
+	top: -39px
+	padding: 0 20px
+	left: 50%
+	transform: translateX(-50%)
+
+/* ------------------------------------ */
+/* ------------- PAYMENTS ------------- */
+/* ------------------------------------ */
+.payments
+	padding: 0 15px
+.payments-2-col
+	.col-xs-4:first-child
+		margin-left: 16.66666667%
+.payments-1-col
+	.col-xs-4:first-child
+		margin-left: 33.33333333%
+.payment-item
+	margin-top: 70px
+	margin-bottom: 20px
+	padding: 40px 20px 0px
+	border-top: 3px solid #f2f2f2
+	border-left: 3px solid #f2f2f2
+	position: relative
+	h2
+		font: normal bold 1.75em/1.1 Arial, Helvetica, sans-serif
+		margin: 0 0 0.5em 0
+		font-size: 23px
+		margin-bottom: 10px
+		font-weight: 600
+		text-align: center
+	ul
+		padding-left: 20px
+		margin-bottom: 20px
+		li
+			color: #ffc533
+			span
+				color: #000
+	&:last-child
+		border-right: 3px solid #f2f2f2
+		.payment-price
+			width: 117px
+.payment-icon
+	position: absolute
+	top: -55px
+	left: 50%
+	transform: translateX(-50%)
+.payment-footer
+	margin: 0 -20px
+.payment-price
+	background: #f2f2f2
+	border: 3px solid #f2f2f2
+	float: left
+	padding: 12px 0px
+	width: 120px
+	text-align: center
+	font-size: 14px
+.payment-btn
+	text-align: center
+	float: left
+	width: 159px
+	cursor: pointer
+	font-size: 14px
+	line-height: 14px
+	padding: 12px 0px
+
+/* ------------------------------------ */
+/* ------------- PAYMENTS ------------- */
+/* ------------------------------------ */
+.teachers
+	padding: 0 15px
+.teacher
+	padding: 40px 5px 0px 20px
+	border-top: 3px solid #f2f2f2
+	border-left: 3px solid #f2f2f2
+	margin: 20px 5px 0 -15px
+	img
+		width: 180px
+		margin: 0 auto
+		position: relative
+		display: block
+	ul
+		padding: 10px 0 10px 18px
+		li
+			list-style-type: none
+			color: #000
+			&::before
+				display: none
+.teacher-name
+	font-size: 18px
+	font-family: "PTSerifBold", sans-serif
+	line-height: 24px
+	margin-top: 20px
+	margin-bottom: 15px
+	text-align: center
+.teacher-descr
+	font-family: "PTSerifBold", sans-serif
+	margin: 20px 0 10px
+	text-align: center
+.teachers-4-col
+	.col-xs-3:nth-child(4n) .teacher
+		// border-right: 3px solid #f2f2f2
+		margin-right: -15px
+		padding-right: 15px
+	.teacher img,
+	.btn-medium
+		max-width: 164px
+.teachers-3-col
+	.col-xs-4:nth-child(3n) .teacher
+		// border-right: 3px solid #f2f2f2
+		margin-right: -15px
+		padding-right: 15px
+.teachers-2-col
+	.col-xs-6:nth-child(2n) .teacher
+		// border-right: 3px solid #f2f2f2
+		margin-right: -15px
+		padding-right: 15px
+
+/* ------------------------------------ */
+/* ---------- LIBS CUSTOMIZE ---------- */
+/* ------------------------------------ */
+
+/* ----------- OWL CAROUSEL ----------- */
+.owl-carousel
+	.owl-nav
+		position: absolute
+		width: 100%
+		top: 45%
+		height: 50px
+		padding-left: 55px
+		padding-right: 55px
+		z-index: 1000
+		.owl-prev,
+		.owl-next
+			height: 50px
+			width: 50px
+			cursor: pointer
+		.owl-prev,
+		.owl-prev:hover
+			background: transparent url(../img/icons/arrow-prev.png) center center no-repeat
+			float: left
+		.owl-next,
+		.owl-next:hover
+			background: transparent url(../img/icons/arrow-next.png) center center no-repeat
+			float: right
+	.owl-dots
+		width: 100%
+		max-width: 100%
+		margin: 0 auto
+		.owl-dot
+			width: 25%
+			position: relative
+			top: -4px
+			span
+				height: 10px
+				width: 100%
+				background-color: #f2f2f2
+				float: left
+				margin: 0
+				border-radius: 0
+			&.active
+				span
+					background-color: #f8c24c
+
+/* ------------ BOOTSTRAP ------------- */
+.container
+	width: 1170px!important
+
+/* ------------------------------------ */
+/* -------------- @MEDIA -------------- */
+/* ------------------------------------ */
+@import "media" // Всегда в конце
